@@ -36,10 +36,10 @@ app.get('/users/:id', (req,res) => {
 app.post('/users',(req,res) => {
     const {name,bio} = req.body
 
-    if(!name || !body){
+    if(!name || !bio){
         res.status(400).json({message:"name and bio are required"})
     }else{
-        const newUser = {id:generate(),name,breed}
+        const newUser = {id:generate(),name,bio}
         people.push(newUser)
         res.status(201).json(newUser)
     }
